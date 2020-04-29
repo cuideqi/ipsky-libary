@@ -1,0 +1,21 @@
+<div class="address">
+  <nz-select class="province" [style.width]="width" [(ngModel)]="selectedProvince" (ngModelChange)="provinceChange($event)"
+             [nzDisabled]="_disabled">
+    <nz-option *ngFor="let p of provinceData" [nzValue]="p.value" [nzLabel]="p.label" [nzDisabled]="p.disabled"></nz-option>
+  </nz-select>
+  <nz-select class="city" [style.width]="width" [(ngModel)]="selectedCity" (ngModelChange)="cityChange($event)"
+             [nzDisabled]="_disabled">
+    <ng-container *ngIf="selectedProvince && cityData">
+      <nz-option *ngFor="let city of cityData" [nzValue]="city" [nzLabel]="city"></nz-option>
+    </ng-container>
+  </nz-select>
+  <nz-select [style.width]="width" [(ngModel)]="selectedCounty" (ngModelChange)="countyChange($event)"
+             [nzDisabled]="_disabled">
+    <ng-container *ngIf="selectedCity && countyData">
+      <nz-option *ngFor="let county of countyData" [nzValue]="county" [nzLabel]="county"></nz-option>
+    </ng-container>
+  </nz-select>
+  <div *ngIf="needDetail">
+    <input type="text" [disabled]="_disabled || !selectedProvince || !selectedCity" nz-input [(ngModel)]="detail_address" (ngModelChange)="detailAddressChange()">
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="root" id="root">
+  <div class="header flex-container justify-content-between">
+    <div class="flex-container align-items-center">
+      <img class="logo" alt="logo" style="height: 29px;" src="../../assets/images/icon_logo.png">
+    </div>
+  </div>
+  <div class="main ps" [perfectScrollbar]="scrollConfig" #mainBar="ngxPerfectScrollbar">
+    <div class="left-menu font-size-14" #leftMenu>
+      <ul nz-menu>
+        <li nz-menu-group nzTitle="组件">
+          <ul>
+            <li routerLink="/components/address" nz-menu-item>地址联动</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <router-outlet #routerOutlet="outlet"></router-outlet>
+    </div>
+    <div class="footer">
+      copyright@youshangjiao.com.cn
+    </div>
+  </div>
+</div>

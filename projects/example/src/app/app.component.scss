@@ -1,0 +1,87 @@
+$header-height: 59px;
+$left-menu-width: 200px;
+$padding: 33px;
+$header-menu-zIndex: 300;
+$bg: #F6F7FB;
+
+.root {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  min-width: 1190px;
+  padding-top: $header-height;
+  background-color: rgb(246, 247, 251);
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: $header-height;
+  top: 0;
+  z-index: $header-menu-zIndex;
+  background-color: #ffffff;
+  padding: 0 20px;
+  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.07);
+}
+
+.left-menu {
+  position: fixed;
+  top: $header-height;
+  bottom: 0;
+  left: 0;
+  z-index: $header-menu-zIndex - 1;
+  width: $left-menu-width;
+  background-color: white;
+  color: #5d5d5d;
+}
+
+.main {
+  padding-left: $left-menu-width + $padding;
+  padding-top: $padding + 5px;
+  padding-right: $padding - 7px;
+  height: 100%;
+  position: relative;
+
+  .content {
+    min-height: calc(100% - 50px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  $padding: 25px;
+  .main {
+    padding-left: $left-menu-width + $padding;
+    padding-right: $padding;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  $padding: 42px;
+  .main {
+    padding-left: $left-menu-width + $padding;
+    padding-right: $padding;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  $padding: 53px;
+  .main {
+    padding-left: $left-menu-width + $padding;
+    padding-right: $padding;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+    $padding: 85px;
+    .main {
+      padding-left: $left-menu-width + $padding;
+      padding-right: $padding;
+    }
+}
+
+
+
+
+.footer {
+  height: $header-height;
+  line-height: $header-height;
+}

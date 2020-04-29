@@ -1,0 +1,102 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~ng-zorro-antd/ng-zorro-antd.min.css";
+@import 'root';
+/*****浮动布局******/
+.helper-clearfix {
+
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.helper-pull-left {
+  float: left;
+}
+
+.helper-pull-right {
+  float: right;
+}
+
+/*********flex布局*********/
+.flex-container {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-center {
+  @extend .flex-container;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-justify-between {
+  @extend .flex-center;
+  justify-content: space-between;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+
+/********position定位*********/
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+
+.vertical-middle {
+  position: relative;
+  top: 50%; /*偏移*/
+  transform: translateY(-50%);
+}
+
+.inline-block {
+  display: inline-block;
+  padding-left: 30px;
+}
+
