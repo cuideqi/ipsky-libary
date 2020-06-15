@@ -1,0 +1,107 @@
+.dialog-container {
+  background-color: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 2px 15px 13px rgba(0, 0, 0, 0.01);
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: static;
+}
+
+.dialog {
+  // padding: 15px;
+  height: 100%;
+}
+
+.dialog-header {
+  height: 70px;
+  line-height: 70px;
+  padding: 0 25px;
+  border-bottom: 1px solid #e2e2e2;
+  .helper-pull-left {
+    font-size: 18px;
+    text-align: left;
+    color: #323232;
+  }
+  .helper-pull-right {
+    font-size: 26px;
+    color: #bdc7d6;
+    svg {
+      cursor: pointer;
+    }
+  }
+  h3 {
+    margin: 0;
+  }
+}
+
+.dialog-header-big {
+  @extend .dialog-header;
+  height: 100px;
+  line-height: 100px;
+}
+
+.dialog-body {
+  height: 378px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 9px;
+    background-color: #f1f1f1;
+  }
+
+  /*定义滚动条轨道内阴影+圆角*/
+  &::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+
+  /*定义滑块内阴影+圆角*/
+  &::-webkit-scrollbar-thumb {
+    width: 9px;
+    height: 20px;
+    background-color: #d8d8d8;
+  }
+  .body-content {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+  }
+}
+
+.dialog-footer {
+  height: 102px;
+  border-bottom: none;
+  padding: 0;
+  text-align: center;
+  button {
+    margin-right: 18px;
+  }
+}
+
+.dialog form {
+  width: 100%;
+  .ant-form-item-control-wrapper .ant-form-item-control .ant-form-item-children {
+    input.ant-input,
+    textarea {
+      width: 529px;
+    }
+  }
+}
+
+.dialog {
+  .dialog-body {
+    textarea {
+      width: 529px;
+    }
+  }
+}
+
+.dialog-open {
+  position: fixed;
+  width: 100%;
+  overflow-y: scroll;
+}

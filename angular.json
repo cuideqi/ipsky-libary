@@ -32,13 +32,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ipsky-library/tsconfig.lib.json",
-              "projects/ipsky-library/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["projects/ipsky-library/tsconfig.lib.json", "projects/ipsky-library/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -63,14 +58,8 @@
             "polyfills": "projects/example/src/polyfills.ts",
             "tsConfig": "projects/example/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "projects/example/src/favicon.ico",
-              "projects/example/src/assets"
-            ],
-            "styles": [
-              "projects/example/src/styles/styles.scss",
-              "node_modules/perfect-scrollbar/css/perfect-scrollbar.css"
-            ],
+            "assets": ["projects/example/src/favicon.ico", "projects/example/src/assets"],
+            "styles": ["projects/example/src/styles/styles.scss", "dist/ipsky-library/ipsky.css"],
             "scripts": []
           },
           "configurations": {
@@ -128,27 +117,16 @@
             "polyfills": "projects/example/src/polyfills.ts",
             "tsConfig": "projects/example/tsconfig.spec.json",
             "karmaConfig": "projects/example/karma.conf.js",
-            "assets": [
-              "projects/example/src/favicon.ico",
-              "projects/example/src/assets"
-            ],
-            "styles": [
-              "projects/example/src/styles.scss"
-            ],
+            "assets": ["projects/example/src/favicon.ico", "projects/example/src/assets"],
+            "styles": ["projects/example/src/styles.scss"],
             "scripts": []
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/example/tsconfig.app.json",
-              "projects/example/tsconfig.spec.json",
-              "projects/example/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["projects/example/tsconfig.app.json", "projects/example/tsconfig.spec.json", "projects/example/e2e/tsconfig.json"],
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -164,6 +142,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ipsky-library"
 }

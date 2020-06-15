@@ -6,6 +6,6 @@ const PIPES = [StrToArrPipe];
   imports: [],
   exports: [PIPES],
   declarations: [PIPES],
-  providers: [],
+  providers: []
 })
-export class PipesModule { }
+export class IpskyPipesModule {}

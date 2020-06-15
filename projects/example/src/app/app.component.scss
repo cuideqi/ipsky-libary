@@ -1,8 +1,8 @@
 $header-height: 59px;
 $left-menu-width: 200px;
-$padding: 33px;
+$padding: 15px;
 $header-menu-zIndex: 300;
-$bg: #F6F7FB;
+$bg: #f6f7fb;
 
 .root {
   height: 100%;
@@ -41,13 +41,12 @@ $bg: #F6F7FB;
   padding-right: $padding - 7px;
   height: 100%;
   position: relative;
-
+  background: #fff;
   .content {
     min-height: calc(100% - 50px);
   }
 }
 @media screen and (min-width: 1200px) {
-  $padding: 25px;
   .main {
     padding-left: $left-menu-width + $padding;
     padding-right: $padding;
@@ -55,7 +54,6 @@ $bg: #F6F7FB;
 }
 
 @media screen and (min-width: 1440px) {
-  $padding: 42px;
   .main {
     padding-left: $left-menu-width + $padding;
     padding-right: $padding;
@@ -63,7 +61,6 @@ $bg: #F6F7FB;
 }
 
 @media screen and (min-width: 1600px) {
-  $padding: 53px;
   .main {
     padding-left: $left-menu-width + $padding;
     padding-right: $padding;
@@ -71,15 +68,11 @@ $bg: #F6F7FB;
 }
 
 @media screen and (min-width: 1900px) {
-    $padding: 85px;
-    .main {
-      padding-left: $left-menu-width + $padding;
-      padding-right: $padding;
-    }
+  .main {
+    padding-left: $left-menu-width + $padding;
+    padding-right: $padding;
+  }
 }
-
-
-
 
 .footer {
   height: $header-height;

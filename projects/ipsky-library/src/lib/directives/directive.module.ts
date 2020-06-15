@@ -7,6 +7,6 @@ const DIRECTIVES = [DebounceClickDirective, TextWrappingDirective];
   imports: [],
   exports: [DIRECTIVES],
   declarations: [DIRECTIVES],
-  providers: [],
+  providers: []
 })
-export class DirectivesModule { }
+export class IpskyDirectivesModule {}

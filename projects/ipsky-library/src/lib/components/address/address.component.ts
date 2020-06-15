@@ -30,8 +30,6 @@ interface ProvinceOption {
   ]
 })
 export class AddressComponent implements OnInit, ControlValueAccessor {
-
-
   private static ADDRESS;
   private static addressOb: Observable<any>;
   selectedProvince: string | null = null;
@@ -67,21 +65,18 @@ export class AddressComponent implements OnInit, ControlValueAccessor {
     if (this.addressOb) {
       return this.addressOb;
     }
-    return this.addressOb = http.get('../assets/china_address.json')
-      .pipe(map(r => this.ADDRESS = r));
+    return (this.addressOb = http.get('../assets/china_address.json').pipe(map(r => (this.ADDRESS = r))));
   }
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
   ngOnInit() {
     if (AddressComponent.ADDRESS) {
       this.setAddress();
     } else {
-      AddressComponent.loadAdressMeta(this.http)
-        .subscribe(r => {
-          this.setAddress();
-          this.inintProvinceData();
-        });
+      AddressComponent.loadAdressMeta(this.http).subscribe(r => {
+        this.setAddress();
+        this.inintProvinceData();
+      });
     }
   }
 
@@ -140,20 +135,20 @@ export class AddressComponent implements OnInit, ControlValueAccessor {
     }
   }
 
-  provinceChange(event) {
+  provinceChange() {
     this.cityData = this.selectedProvince ? this.getCityData(this.addressData) : null;
     this.selectedCity = null;
     this.selectedCounty = null;
     this.notifyChange();
   }
 
-  cityChange(event) {
+  cityChange() {
     this.countyData = this.selectedProvince && this.selectedCity ? this.getCountyData(this.addressData) : null;
     this.selectedCounty = null;
     this.notifyChange();
   }
 
-  countyChange(event) {
+  countyChange() {
     this.notifyChange();
   }
 
@@ -162,11 +157,13 @@ export class AddressComponent implements OnInit, ControlValueAccessor {
   }
 
   private notifyChange() {
-    this.onChange({
-      province: this.selectedProvince,
-      city: this.selectedCity,
-      county: this.selectedCounty,
-      detail: this.detail_address
-    });
+    if (this.onChange) {
+      this.onChange({
+        province: this.selectedProvince,
+        city: this.selectedCity,
+        county: this.selectedCounty,
+        detail: this.detail_address
+      });
+    }
   }
 }

@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { AddressModule } from './components/address';
-import { PipesModule } from './pipes';
-import { DirectivesModule } from './directives';
+import { IpskyPipesModule } from './pipes';
+import { IpskyDirectivesModule } from './directives';
+import { DialogModule } from './components/dialog';
 
-
+export * from './components/address';
+export * from './pipes';
+export * from './directives';
+export * from './components/dialog';
 @NgModule({
   imports: [],
-  exports: [AddressModule, PipesModule, DirectivesModule],
+  exports: [AddressModule, IpskyPipesModule, IpskyDirectivesModule, DialogModule],
   declarations: [],
-  providers: [],
+  providers: []
 })
-export class IpskyLibrayModule { }
+export class IpskyLibraryModule {}
