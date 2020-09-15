@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { IpskyLibraryModule } from 'ipsky-library';
+import { IpskyLibraryModule } from 'projects/ipsky-library/ipsky-library.module';
 import { FormsModule } from '@angular/forms';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { NzMenuModule } from 'ng-zorro-antd/menu';

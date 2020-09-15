@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AddressExampleComponent } from './address-example/address-example.component';
 import { ComponentsRoutingModule } from './components-routing.module';
-import { IpskyLibrayModule, DialogModule } from 'ipsky-library';
+import { IpskyLibrayModule, DialogModule } from 'projects/ipsky-library/ipsky-library.module';
 import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 
 @NgModule({

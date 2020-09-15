@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
-import { DialogService } from 'ipsky-library';
+import { DialogService } from 'projects/ipsky-library/ipsky-library.module';
 
 @Component({
   selector: 'app-dialog-example',

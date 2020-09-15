@@ -1,9 +1,9 @@
 {
-  "name": "ipsky-library",
+  "name": "ipsky-lib",
   "version": "0.0.0",
   "scripts": {
     "start": "ng serve --project=example",
-    "build:lib": "ng build --project=ipsky-library",
+    "build:lib": "ng build ipsky-library",
     "postbuild:lib": "npm run css-compile",
     "css-compile": "node-sass --output-style compressed ./projects/ipsky-library/styles/style.scss ./dist/ipsky-library/ipsky.css",
     "test": "ng test --project=ipsky-library",
